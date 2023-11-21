@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "scripts": {
+    "build": "(npm install) && (cd ../client-admin && npm install && npm run build) && (cd ../client-customer && npm install && npm run build)",
+    "start": "node index.js"
+  },
   "keywords": [],
   "authorr": "",
   "license": "ISC",
@@ -16,9 +20,5 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.3",
     "nodemailer": "^6.9.5"
-  },
-  "scripts": {
-    "build": "(npm install) && (cd ../client-admin && npm install && npm run build) && (cd ../client-customer && npm install && npm run build)",
-    "start": "node index.js"
   }
 }
